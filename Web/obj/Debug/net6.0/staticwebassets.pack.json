@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Login\\Login.css"
     },
     {
+      "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\css\\Productos\\Productos.css",
+      "PackagePath": "staticwebassets\\css\\Productos\\Productos.css"
+    },
+    {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\css\\Roles\\Roles.css",
       "PackagePath": "staticwebassets\\css\\Roles\\Roles.css"
     },
@@ -29,12 +33,20 @@
       "PackagePath": "staticwebassets\\images\\.DS_Store"
     },
     {
+      "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\images\\Image_not_available.png",
+      "PackagePath": "staticwebassets\\images\\Image_not_available.png"
+    },
+    {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\images\\bg.jpg",
       "PackagePath": "staticwebassets\\images\\bg.jpg"
     },
     {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Login\\Login.js",
       "PackagePath": "staticwebassets\\js\\Login\\Login.js"
+    },
+    {
+      "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Productos\\Productos.js",
+      "PackagePath": "staticwebassets\\js\\Productos\\Productos.js"
     },
     {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Roles\\Roles.js",

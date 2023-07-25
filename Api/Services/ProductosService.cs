@@ -2,6 +2,9 @@
 using Common.Helpers;
 using Data.Entities;
 using Data.Manager;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Api.Services
 {
@@ -9,9 +12,9 @@ namespace Api.Services
     {
         private readonly ProductosManager _manager;
 
-        public ProductosService()
+        public ProductosService(ProductosManager manager)
         {
-            _manager = new ProductosManager();
+            _manager = manager;
         }
 
         public async Task<List<Productos>> BuscarProductosAsync()

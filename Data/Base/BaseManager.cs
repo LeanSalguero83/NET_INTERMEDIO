@@ -1,23 +1,21 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Data;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Data.Base
 {
     public abstract class BaseManager<T> where T : class
     {
-        #region Singleton Context
-        private static ApplicationDbContext contextInstance = null;
 
-        public static ApplicationDbContext contextSingleton
+        protected readonly ApplicationDbContext context;
+
+
+        public  BaseManager(ApplicationDbContext context)
         {
-            get
-            {
-                if (contextInstance == null)
-                    contextInstance = new ApplicationDbContext();
-                return contextInstance;
-
-            }
+            this.context = context;
         }
-        #endregion
+
 
         #region Metodos Abstractos
         public abstract Task<List<T>> BuscarListaAsync();
@@ -31,12 +29,12 @@ namespace Data.Base
             try
             {
                 if (id == 0)
-                    contextSingleton.Entry(entity).State = EntityState.Added;
+                    context.Entry(entity).State = EntityState.Added;
                 else
-                    contextSingleton.Entry(entity).State = EntityState.Modified;
+                    context.Entry(entity).State = EntityState.Modified;
 
-                var resultado = await contextSingleton.SaveChangesAsync() > 0;
-                contextSingleton.Entry(entity).State = EntityState.Detached;
+                var resultado = await context.SaveChangesAsync() > 0;
+                context.Entry(entity).State = EntityState.Detached;
                 return resultado;
             }
             catch (Exception ex)
@@ -49,8 +47,8 @@ namespace Data.Base
         {
             try
             {
-                contextSingleton.Entry(entity).State = EntityState.Modified;
-                var resultado = await contextSingleton.SaveChangesAsync() > 0;
+                context.Entry(entity).State = EntityState.Modified;
+                var resultado = await context.SaveChangesAsync() > 0;
                 return resultado;
             }
             catch (Exception ex)

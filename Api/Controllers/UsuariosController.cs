@@ -1,6 +1,9 @@
-﻿using Api.Services;
+﻿using Api.Interfaces;
+using Api.Services;
 using Data.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
@@ -8,29 +11,35 @@ namespace Api.Controllers
     [Route("api/[controller]")]
     public class UsuariosController
     {
+        private readonly IUsuariosService _usuariosService;
+
+        public UsuariosController(IUsuariosService usuariosService)
+        {
+            _usuariosService = usuariosService;
+        }
 
         [HttpGet]
         [Route("BuscarUsuarios")]
         public async Task<List<Usuarios>> BuscarUsuarios()
         {
-            var buscarUsuarios = new UsuariosService();
-            return await buscarUsuarios.BuscarUsuariosAsync();
+
+            return await _usuariosService.BuscarUsuariosAsync();
         }
 
         [HttpPost]
         [Route("GuardarUsuario")]
         public async Task<List<Usuarios>> GuardarUsuario(Usuarios usuarios)
         {
-            var guardarUsuario = new UsuariosService();
-            return await guardarUsuario.GuardarUsuarioASync(usuarios);
+            
+            return await _usuariosService.GuardarUsuarioASync(usuarios);
         }
 
         [HttpPost]
         [Route("EliminarUsuario")]
         public async Task<List<Usuarios>> EliminarUsuario(Usuarios usuarios)
         {
-            var guardarUsuario = new UsuariosService();
-            return await guardarUsuario.EliminarUsuarioASync(usuarios);
+            
+            return await _usuariosService.EliminarUsuarioASync(usuarios);
         }
 
 

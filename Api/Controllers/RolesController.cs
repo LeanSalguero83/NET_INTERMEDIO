@@ -1,6 +1,10 @@
-﻿using Api.Services;
+﻿using Api.Interfaces;
+using Api.Services;
 using Data.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 
 namespace Api.Controllers
 {
@@ -8,29 +12,35 @@ namespace Api.Controllers
     [Route("api/[controller]")]
     public class RolesController
     {
+        private readonly IRolesService _rolesService;
+
+        public RolesController(IRolesService rolesService)
+        {
+            _rolesService = rolesService;
+        }
 
         [HttpGet]
         [Route("BuscarRoles")]
         public async Task<List<Roles>> BuscarRoles()
         {
-            var buscarRoles = new RolesService();
-            return await buscarRoles.BuscarRolesAsync();
+            
+            return await _rolesService.BuscarRolesAsync();
         }
 
         [HttpPost]
         [Route("GuardarRol")]
         public async Task<List<Roles>> GuardarRol(Roles roles)
         {
-            var guardarRol = new RolesService();
-            return await guardarRol.GuardarRolASync(roles);
+           
+            return await _rolesService.GuardarRolASync(roles);
         }
 
         [HttpPost]
         [Route("EliminarRol")]
         public async Task<List<Roles>> EliminarRol(Roles roles)
         {
-            var guardarRol = new RolesService();
-            return await guardarRol.EliminarRolASync(roles);
+            
+            return await _rolesService.EliminarRolASync(roles);
         }
 
 

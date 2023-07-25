@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Api.Services;
 using Data;
+using Data.Manager;
+using Api.Interfaces;
 
-var Origin = "";
 var builder = WebApplication.CreateBuilder(args);
+var Origin = "*";
+
 
 builder.Services.AddCors(options =>
 {
@@ -12,11 +19,23 @@ builder.Services.AddCors(options =>
     });
 });
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContext");
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddScoped<IProductosService, ProductosService>();
+builder.Services.AddScoped<ProductosManager>();
+builder.Services.AddScoped<IUsuariosService, UsuariosService>();
+builder.Services.AddScoped<UsuariosManager>();
+builder.Services.AddScoped<IRolesService, RolesService>();
+builder.Services.AddScoped<RolesManager>();
+
+
+
+
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-ApplicationDbContext.ConnectionString = builder.Configuration.GetConnectionString("ApplicationDbContext");
 
 
 var app = builder.Build();

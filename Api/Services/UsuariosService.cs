@@ -9,9 +9,9 @@ namespace Api.Services
     {
         private readonly UsuariosManager _manager;
 
-        public UsuariosService()
+        public UsuariosService(UsuariosManager manager)
         {
-            _manager = new UsuariosManager();
+            _manager = manager;
         }
 
         public async Task<List<Usuarios>> BuscarUsuariosAsync()

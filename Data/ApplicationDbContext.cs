@@ -1,24 +1,21 @@
-﻿using Data.Entities;
-using Microsoft.EntityFrameworkCore;
-
+﻿using Microsoft.EntityFrameworkCore;
+using Data.Entities;
 
 namespace Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext() : base() { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        { }
 
-        public static string ConnectionString { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-            optionsBuilder.UseSqlServer(ConnectionString);
-        }
-
+        public DbSet<Productos> Productos { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Roles> Roles { get; set; }
 
-        public DbSet<Productos> Productos { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

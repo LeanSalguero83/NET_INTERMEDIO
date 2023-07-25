@@ -1,6 +1,8 @@
 ﻿using Data;
 using Data.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
@@ -8,20 +10,18 @@ namespace Api.Controllers
     [Route("api/[controller]")]
     public class AuthenticateController : ControllerBase
     {
+        private readonly ApplicationDbContext _context;
 
-        private static ApplicationDbContext contextInstance;
-
-        public AuthenticateController()
+        public AuthenticateController(ApplicationDbContext context)
         {
-            contextInstance = new ApplicationDbContext();
+            _context = context;
         }
 
         [HttpPost]
         [Route("Login")]
         public async Task<IActionResult> Login(LoginDto usuario)
         {
-
-            var validarUsuario = contextInstance.Usuarios.Where(x => x.Mail == usuario.Mail && x.Clave == usuario.Clave).FirstOrDefault();
+            var validarUsuario = _context.Usuarios.FirstOrDefault(x => x.Mail == usuario.Mail && x.Clave == usuario.Clave);
 
             if (validarUsuario != null)
             {
@@ -32,6 +32,5 @@ namespace Api.Controllers
                 return Ok("false");
             }
         }
-
     }
 }

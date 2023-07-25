@@ -7,6 +7,8 @@ namespace Data.Manager
 {
     public class RolesManager : BaseManager<Roles>
     {
+        public RolesManager(ApplicationDbContext context) : base(context) { }
+
         public override Task<List<Roles>> Borrar(Roles entity)
         {
             throw new NotImplementedException();
@@ -19,7 +21,7 @@ namespace Data.Manager
 
         public async override Task<List<Roles>> BuscarListaAsync()
         {
-            return await contextSingleton.Roles.Where(x => x.Activo == true).ToListAsync();
+            return await context.Roles.Where(x => x.Activo == true).ToListAsync();
         }
     }
 }

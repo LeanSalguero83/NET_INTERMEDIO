@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Api/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "Data": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -980,6 +981,11 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
+      "Common/1.0.0": {
+        "runtime": {
+          "Common.dll": {}
+        }
+      },
       "Data/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
@@ -1754,6 +1760,11 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Data/1.0.0": {
       "type": "project",

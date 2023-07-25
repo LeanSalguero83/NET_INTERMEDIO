@@ -17,7 +17,8 @@ $(document).ready(function () {
             },
             { data: 'clave', title: 'Clave' },
             { data: 'mail', title: 'Mail' },
-            { data: 'id_Rol', title: 'Rol' },
+            { data: 'roles.nombre', title: 'Rol' },
+
             {
                 data: function (row) {
                     return row.activo == true ? "Si" : "No";

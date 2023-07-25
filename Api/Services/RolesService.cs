@@ -9,9 +9,9 @@ namespace Api.Services
     {
         private readonly RolesManager _manager;
 
-        public RolesService()
+        public RolesService(RolesManager manager)
         {
-            _manager = new RolesManager();
+            _manager = manager;
         }
 
         public async Task<List<Roles>> BuscarRolesAsync()
