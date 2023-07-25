@@ -17,13 +17,13 @@ namespace Data.Base
         }
 
 
-        #region Metodos Abstractos
+        
         public abstract Task<List<T>> BuscarListaAsync();
         public abstract Task<List<T>> BuscarAsync(T entity);
         public abstract Task<List<T>> Borrar(T entity);
-        #endregion
+     
 
-        #region Metodos Publicos
+       
         public async Task<bool> Guardar(T entity, int id)
         {
             try
@@ -57,6 +57,6 @@ namespace Data.Base
             }
         }
 
-        #endregion
+        
     }
 }

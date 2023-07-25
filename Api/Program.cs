@@ -27,6 +27,8 @@ builder.Services.AddScoped<IUsuariosService, UsuariosService>();
 builder.Services.AddScoped<UsuariosManager>();
 builder.Services.AddScoped<IRolesService, RolesService>();
 builder.Services.AddScoped<RolesManager>();
+builder.Services.AddScoped<IServiciosService, ServiciosService>();
+builder.Services.AddScoped<ServiciosManager>();
 
 
 

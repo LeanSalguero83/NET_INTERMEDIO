@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pb2674p95NOdrPhRwmXtncKh1t3o0w9MsIylYVmKGhg=",
+  "Hash": "PO0D31TBDO2E4EeDHDWNfNAmf49I7HcHGlB/lYwTzWI=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Roles\\Roles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\css\\Servicios\\Servicios.css",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "css/Servicios/Servicios.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Servicios\\Servicios.css"
     },
     {
       "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\css\\site.css",
@@ -253,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Roles\\Roles.js"
+    },
+    {
+      "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Servicios\\Servicios.js",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "js/Servicios/Servicios.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Servicios\\Servicios.js"
     },
     {
       "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\site.js",

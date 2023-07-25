@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Web.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using Common.Helpers;
+
 
 namespace Web.Controllers
 {
@@ -27,9 +29,14 @@ namespace Web.Controllers
             var resultadoRoles = roles as OkObjectResult;
 
             if (usuario != null)
-                usuViewModel = usuario;
 
-            if (resultadoRoles != null)
+			{
+				usuario.Clave = EncryptHelper.Desencriptar(usuario.Clave);
+				usuViewModel = usuario;
+
+			}
+
+			if (resultadoRoles != null)
             {
                 var listaRoles = JsonConvert.DeserializeObject<List<Roles>>(resultadoRoles.Value.ToString());
                 var listaItemsRoles = new List<SelectListItem>();

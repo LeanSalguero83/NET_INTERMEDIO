@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\Roles\\Roles.css"
     },
     {
+      "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\css\\Servicios\\Servicios.css",
+      "PackagePath": "staticwebassets\\css\\Servicios\\Servicios.css"
+    },
+    {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\css\\Usuarios\\Usuarios.css",
       "PackagePath": "staticwebassets\\css\\Usuarios\\Usuarios.css"
     },
@@ -51,6 +55,10 @@
     {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Roles\\Roles.js",
       "PackagePath": "staticwebassets\\js\\Roles\\Roles.js"
+    },
+    {
+      "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Servicios\\Servicios.js",
+      "PackagePath": "staticwebassets\\js\\Servicios\\Servicios.js"
     },
     {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Usuarios\\Usuarios.js",

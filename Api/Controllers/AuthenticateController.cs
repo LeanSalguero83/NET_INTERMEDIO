@@ -1,10 +1,11 @@
 ﻿using Data;
 using Data.Dtos;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using System.Threading.Tasks;
+
+using Common.Helpers;
 
 namespace Api.Controllers
+
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -21,6 +22,7 @@ namespace Api.Controllers
         [Route("Login")]
         public async Task<IActionResult> Login(LoginDto usuario)
         {
+            usuario.Clave = EncryptHelper.Encriptar(usuario.Clave);
             var validarUsuario = _context.Usuarios.FirstOrDefault(x => x.Mail == usuario.Mail && x.Clave == usuario.Clave);
 
             if (validarUsuario != null)

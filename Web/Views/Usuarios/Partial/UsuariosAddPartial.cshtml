@@ -46,7 +46,7 @@
                                     foreach (var item in Model.Lista_Roles)
                                     {
                                         if (Model.Id_Rol != null && item.Value == Model.Id_Rol.ToString()) {
-                                            item.Selected = true;
+                                            //item.Selected = true;
                                             <option value=@item.Value selected>@item.Text</option>
                                         }else{
                                             <option value=@item.Value>@item.Text</option>

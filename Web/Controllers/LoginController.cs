@@ -1,7 +1,4 @@
 ﻿using Data.Base;
-using Data.Entities;
-using Microsoft.AspNetCore.Http;
-using System.Net.Http;
 using Data.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
