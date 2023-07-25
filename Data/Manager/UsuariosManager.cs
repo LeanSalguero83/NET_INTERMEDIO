@@ -1,11 +1,7 @@
 ﻿using Data.Base;
 using Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Data.Manager
 {
@@ -23,7 +19,7 @@ namespace Data.Manager
 
         public async override Task<List<Usuarios>> BuscarListaAsync()
         {
-            return await contextSingleton.Usuarios.Where(x => x.Activo == true).ToListAsync();
+            return await contextSingleton.Usuarios.Where(x => x.Activo == true).Include(x => x.Roles).ToListAsync();
         }
     }
 }

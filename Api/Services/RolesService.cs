@@ -1,6 +1,7 @@
 ﻿using Api.Interfaces;
 using Data.Entities;
 using Data.Manager;
+using Common.Helpers;
 
 namespace Api.Services
 {
@@ -22,20 +23,37 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                return null;
+                GenerateLogHelper.LogError(ex, "RolesService", "BuscarRolesAsync");
+                throw ex;
             }
         }
 
         public async Task<List<Roles>> GuardarRolASync(Roles rol)
         {
-            var result = await _manager.Guardar(rol, rol.Id);
-            return await _manager.BuscarListaAsync();
+            try
+            {
+                var result = await _manager.Guardar(rol, rol.Id);
+                return await _manager.BuscarListaAsync();
+            }
+            catch (Exception ex)
+            {
+                GenerateLogHelper.LogError(ex, "RolesService", "GuardarRolASync");
+                throw ex;
+            }
         }
 
         public async Task<List<Roles>> EliminarRolASync(Roles rol)
         {
-            var result = await _manager.Eliminar(rol);
-            return await _manager.BuscarListaAsync();
+            try
+            {
+                var result = await _manager.Eliminar(rol);
+                return await _manager.BuscarListaAsync();
+            }
+            catch (Exception ex)
+            {
+                GenerateLogHelper.LogError(ex, "RolesService", "EliminarRolASync");
+                throw ex;
+            }
         }
     }
 }
