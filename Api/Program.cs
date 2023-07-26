@@ -29,6 +29,9 @@ builder.Services.AddScoped<IRolesService, RolesService>();
 builder.Services.AddScoped<RolesManager>();
 builder.Services.AddScoped<IServiciosService, ServiciosService>();
 builder.Services.AddScoped<ServiciosManager>();
+builder.Services.AddScoped<IRecuperarCuentaService, RecuperarCuentaService>();
+builder.Services.AddScoped<RecuperarCuentaManager>();
+
 
 
 

@@ -20,8 +20,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Leandro/Desktop/NET_INTERMEDIO/Web/Views/Login/CrearCuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ3JlYXJDdWVudGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Leandro/Desktop/NET_INTERMEDIO/Web/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Leandro/Desktop/NET_INTERMEDIO/Web/Views/Login/OlvidoClave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cT2x2aWRvQ2xhdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Leandro/Desktop/NET_INTERMEDIO/Web/Views/Login/RecuperarCuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVjdXBlcmFyQ3VlbnRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Leandro/Desktop/NET_INTERMEDIO/Web/Views/Productos/Partial/ProductosAddPartial.cshtml]
