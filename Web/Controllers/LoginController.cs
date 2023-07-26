@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Net.Mail;
 using System.Net;
+using Newtonsoft.Json;
+
 
 namespace Web.Controllers
 {
@@ -159,10 +161,24 @@ namespace Web.Controllers
             usuario.Id_Rol = 2;
             usuario.Activo = true;
             var response = await baseApi.PostToApi("Usuarios/GuardarUsuario", usuario);
+
             var resultadoLogin = response as OkObjectResult;
-            if (resultadoLogin != null && resultadoLogin.Value.ToString() == "true")
+
+            if (resultadoLogin.StatusCode == 200)
             {
-                return RedirectToAction("Login", "Login");
+                // Necesitaremos deserializar el resultado manualmente usando Newtonsoft.Json
+                var listaUsuarios = JsonConvert.DeserializeObject<List<Usuarios>>(resultadoLogin.Value.ToString());
+
+                // Verificar si el usuario que acabamos de crear está en la lista
+                if (listaUsuarios.Any(u => u.Mail == usuario.Mail))
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+                else
+                {
+                    TempData["ErrorLogin"] = "No se pudo crear el usuario. Contacte a sistemas";
+                    return RedirectToAction("Login", "Login");
+                }
             }
             else
             {
@@ -170,5 +186,6 @@ namespace Web.Controllers
                 return RedirectToAction("Login", "Login");
             }
         }
+
     }
 }
