@@ -14,19 +14,26 @@ namespace Data.Manager
         {
         }
 
-        public override Task<List<Servicios>> Borrar(Servicios entity)
+        public async override Task<List<Servicios>> Borrar(Servicios servicio)
         {
-            throw new NotImplementedException();
-        }
+			context.Database.ExecuteSqlRaw($"EliminarServicio {servicio.Id}");
+			return context.Servicios.FromSqlRaw("ObtenerServicios").ToList();
+		}
 
         public override Task<List<Servicios>> BuscarAsync(Servicios entity)
         {
             throw new NotImplementedException();
         }
 
-        public async  override Task<List<Servicios>> BuscarListaAsync()
+		public async Task<List<Servicios>> GuardarAsync(Servicios servicio)
+		{
+			var p = context.Database.ExecuteSqlRaw($"GuardaroActualizarServicios {servicio.Id}, {servicio.Nombre}, {servicio.Activo}");
+			return context.Servicios.FromSqlRaw("ObtenerServicios").ToList();
+		}
+
+		public async  override Task<List<Servicios>> BuscarListaAsync()
         {
-            return await context.Servicios.Where(x => x.Activo == true).ToListAsync();
-        }
+            return  context.Servicios.FromSqlRaw("ObtenerServicios").ToList();
+		}
     }
 }

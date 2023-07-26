@@ -3,6 +3,7 @@ using Data.Base;
 using Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Web.Models;
+using Microsoft.AspNetCore.Authorization;
 namespace Web.Controllers
 {
     public class RolesController : Controller
@@ -12,7 +13,8 @@ namespace Web.Controllers
         {
             _httpClient = httpClient;
         }
-        public IActionResult Roles()
+		[Authorize]
+		public IActionResult Roles()
         {
             return View();
         }

@@ -5,6 +5,7 @@ using Web.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using Common.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Web.Controllers
@@ -16,7 +17,8 @@ namespace Web.Controllers
         {
             _httpClient = httpClient;
         }
-        public IActionResult Usuarios()
+		[Authorize]
+		public IActionResult Usuarios()
         {
             return View();
         }

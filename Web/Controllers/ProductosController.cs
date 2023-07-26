@@ -2,7 +2,7 @@
 using Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Web.Models;
-
+using Microsoft.AspNetCore.Authorization;
 namespace Web.Controllers
 {
     public class ProductosController : Controller
@@ -12,7 +12,9 @@ namespace Web.Controllers
         {
             _httpClient = httpClient;
         }
-        public IActionResult Productos()
+
+		[Authorize]
+		public IActionResult Productos()
         {
             return View();
         }

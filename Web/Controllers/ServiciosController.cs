@@ -2,7 +2,7 @@
 using Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Web.Models;
-
+using Microsoft.AspNetCore.Authorization;
 namespace Web.Controllers
 {
     public class ServiciosController : Controller
@@ -12,7 +12,8 @@ namespace Web.Controllers
         {
             _httpClient = httpClient;
         }
-        public IActionResult Servicios()
+		[Authorize]
+		public IActionResult Servicios()
         {
             return View();
         }

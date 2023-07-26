@@ -32,9 +32,9 @@ namespace Api.Services
         {
             try
             {
-                var result = await _manager.Guardar(servicio, servicio.Id);
-                return await _manager.BuscarListaAsync();
-            }
+                var result = await _manager.GuardarAsync(servicio);
+				return result;
+			}
             catch (Exception ex)
             {
                 GenerateLogHelper.LogError(ex, "ServiciosService", "GuardarServicioASync");
@@ -46,9 +46,9 @@ namespace Api.Services
         {
             try
             {
-                var result = await _manager.Eliminar(servicio);
-                return await _manager.BuscarListaAsync();
-            }
+                var result = await _manager.Borrar(servicio);
+				return result;
+			}
             catch (Exception ex)
             {
                 GenerateLogHelper.LogError(ex, "ServiciosService", "EliminarServicioASync");
