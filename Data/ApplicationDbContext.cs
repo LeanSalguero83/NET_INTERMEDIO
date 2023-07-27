@@ -9,6 +9,8 @@ namespace Data
             : base(options)
         { }
 
+
+
         public DbSet<Productos> Productos { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Roles> Roles { get; set; }

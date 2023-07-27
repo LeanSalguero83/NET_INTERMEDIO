@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Leandro/Desktop/NET_INTERMEDIO/Web/Views/Chat/Chat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxDaGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Leandro/Desktop/NET_INTERMEDIO/Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

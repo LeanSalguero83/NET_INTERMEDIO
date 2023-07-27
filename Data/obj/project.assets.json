@@ -417,7 +417,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.10": {
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.0-preview.6.23329.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -2203,17 +2203,17 @@
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.10": {
-      "sha512": "b4jKcjo6BLuBRjLTkZPjJCvZ7oa3a798Q1AXSMAknitpBEOEIDryyRd7XZ0cnEIVCvfSND+Trgb00Z4TiTqOvg==",
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.0-preview.6.23329.4": {
+      "sha512": "D11+367YL1vv16PekAZxXqgTpI9lR1BitraJOiR73ndFoKyL4YvZmoY6V09eqm7CIYur7TXtVdM62Ruuzda6XA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.10",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.0-preview.6.23329.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.6.0.10.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.8.0.0-preview.6.23329.4.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
@@ -5495,6 +5495,7 @@
     "net6.0": [
       "Microsoft.AspNetCore.Mvc.Core >= 2.2.5",
       "Microsoft.EntityFrameworkCore >= 6.0.10",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 8.0.0-preview.6.23329.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
       "Microsoft.Extensions.Http >= 6.0.0"
     ]
@@ -5550,6 +5551,10 @@
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.10, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
+            "target": "Package",
+            "version": "[8.0.0-preview.6.23329.4, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",

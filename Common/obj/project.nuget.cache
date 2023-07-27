@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "T/cQpvBS7nFFOodcUVHD8XMbwGF5MvjAKoVzcObISQo4qNfDIoevVEc2J4zMqQNC/UjiwD1ymzlYB3pBRdwprA==",
+  "dgSpecHash": "bEbNnqlESREORvygywHdeWHYZhQdhYiHh5IQvoYEPKV6XWJzF+iZCq4KEeKJX8V85Wg3ubWhagN4OP/sQmIgZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Common\\Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.0-preview.6.23329.4\\microsoft.entityframeworkcore.analyzers.8.0.0-preview.6.23329.4.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cYLgtaobzpzANm2lB/oTJO7kgzKW+BXtNJMh4yFkaD497ivvdQdI8Sg/37A0KsmSstnyogGN5tGob5iHoqx8Hg==",
+  "dgSpecHash": "apZwYQoNVj+iVqvLCfODiAZyZBtP/tOOOtLkVHdYeLHy4UnbvrZaam5xIrgXOZJm2ZJ3qk2OAG7CQxwMD+XxWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Api\\Api.csproj",
   "expectedPackageFiles": [
@@ -29,7 +29,7 @@
     "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
     "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.10\\microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512",
-    "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.10\\microsoft.entityframeworkcore.analyzers.6.0.10.nupkg.sha512",
+    "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.0-preview.6.23329.4\\microsoft.entityframeworkcore.analyzers.8.0.0-preview.6.23329.4.nupkg.sha512",
     "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.10\\microsoft.entityframeworkcore.relational.6.0.10.nupkg.sha512",
     "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.10\\microsoft.entityframeworkcore.sqlserver.6.0.10.nupkg.sha512",
     "C:\\Users\\Leandro\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

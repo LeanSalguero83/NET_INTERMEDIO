@@ -11,7 +11,10 @@ using System.Net.Mail;
 using System.Net;
 using Newtonsoft.Json;
 using Web.Models;
-
+using Microsoft.AspNetCore.Authentication.Google;
+using Web.Services;
+using Data.Manager;
+using Web.Interfaces;
 
 namespace Web.Controllers
 {
@@ -20,11 +23,13 @@ namespace Web.Controllers
         private readonly IHttpClientFactory _httpClient;
         private readonly IConfiguration _configuration;
         private readonly SmtpClient _smtpClient;
-        public LoginController(IHttpClientFactory httpClient, IConfiguration configuration)
+        private readonly IUsuarioService _usuarioService;
+        public LoginController(IHttpClientFactory httpClient, IConfiguration configuration, IUsuarioService usuarioService)
         {
             _httpClient = httpClient;
             _configuration = configuration;
             _smtpClient = new SmtpClient();
+            _usuarioService = usuarioService;
         }
 
         public IActionResult OlvidoClave()
@@ -195,5 +200,51 @@ namespace Web.Controllers
             }
         }
 
+        public async Task LoginGoogle()
+        {
+            await HttpContext.ChallengeAsync(GoogleDefaults.AuthenticationScheme, new AuthenticationProperties()
+            {
+                RedirectUri = Url.Action("GoogleResponse")
+            });
+        }
+
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var resultado = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            var claims = resultado.Principal.Identities.FirstOrDefault().Claims.Select(claim => new
+            {
+                claim.Value,
+                claim.Type,
+                claim.Issuer,
+                claim.OriginalIssuer
+            });
+            var login = new LoginDto();
+            login.Mail = claims.First(c => c.Type == ClaimTypes.Email).Value;
+
+
+
+            var usuario = _usuarioService.BuscarUsuario(login).Result;
+
+            if (usuario != null)
+            {
+                var baseApi = new BaseApi(_httpClient);
+                var token = await baseApi.PostToApi("Authenticate/LoginGoogle", login, "");
+                var resultadoLogin = token as OkObjectResult;
+
+                var resultadoSplit = resultadoLogin.Value.ToString().Split(";");
+                ViewBag.NombreUsuario = resultadoSplit[1];
+                HttpContext.Session.SetString("Token", resultadoSplit[0]);
+                var homeViewModel = new HomeViewModel();
+                homeViewModel.Token = resultadoSplit[0];
+                return View("~/Views/Home/Index.cshtml", homeViewModel);
+
+            }
+            else
+            {
+                TempData["ErrorLogin"] = "El usuario no existe";
+                return RedirectToAction("Login", "Login");
+            }
+        }
     }
 }

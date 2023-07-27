@@ -6,6 +6,7 @@ C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web\bin\Debug\net6.0\Web.deps.json
 C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web\bin\Debug\net6.0\Web.runtimeconfig.json
 C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web\bin\Debug\net6.0\Web.dll
 C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web\bin\Debug\net6.0\Web.pdb
+C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\Leandro\Desktop\NET_INTERMEDIO\Web\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll

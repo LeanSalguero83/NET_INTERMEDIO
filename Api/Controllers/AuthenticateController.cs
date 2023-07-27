@@ -49,6 +49,31 @@ namespace Api.Controllers
                 return Unauthorized();
             }
         }
+
+        [HttpPost]
+        [Route("LoginGoogle")]
+        public async Task<IActionResult> LoginGoogle(LoginDto usuario)
+        {
+            var validarUsuario = _context.Usuarios.Where(x => x.Mail == usuario.Mail).Include(x => x.Roles).FirstOrDefault();
+
+            if (validarUsuario != null)
+            {
+                var Claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Email, validarUsuario.Mail),
+                    new Claim(ClaimTypes.DateOfBirth, validarUsuario.Fecha_Nacimiento.ToString()),
+                    new Claim(ClaimTypes.Role, validarUsuario.Roles.Nombre),
+                };
+
+                var token = CrearToken(Claims);
+                return Ok(new JwtSecurityTokenHandler().WriteToken(token).ToString() + ";" + validarUsuario.Nombre + ";" + validarUsuario.Roles.Nombre + ";" + validarUsuario.Mail);
+            }
+            else
+            {
+                return Unauthorized();
+            }
+        }
+
         private JwtSecurityToken CrearToken(List<Claim> autorizar)
         {
             try

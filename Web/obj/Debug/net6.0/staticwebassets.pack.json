@@ -321,6 +321,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\lib\\microsoft\\signalR\\signalr.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalR\\signalr.js"
+    },
+    {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\lib\\moment\\moment.js",
       "PackagePath": "staticwebassets\\lib\\moment\\moment.js"
     },

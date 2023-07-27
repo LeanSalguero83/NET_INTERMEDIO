@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.0-preview.6.23329.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
           "Microsoft.Extensions.Http": "6.0.0"
         },
@@ -310,7 +311,7 @@
       "Microsoft.EntityFrameworkCore/6.0.10": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.10",
-          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.10",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.0-preview.6.23329.4",
           "Microsoft.Extensions.Caching.Memory": "6.0.1",
           "Microsoft.Extensions.DependencyInjection": "6.0.1",
           "Microsoft.Extensions.Logging": "6.0.0",
@@ -332,7 +333,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.10": {},
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.0-preview.6.23329.4": {},
       "Microsoft.EntityFrameworkCore.Relational/6.0.10": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.10",
@@ -1268,12 +1269,12 @@
       "path": "microsoft.entityframeworkcore.abstractions/6.0.10",
       "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.10": {
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.0-preview.6.23329.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-b4jKcjo6BLuBRjLTkZPjJCvZ7oa3a798Q1AXSMAknitpBEOEIDryyRd7XZ0cnEIVCvfSND+Trgb00Z4TiTqOvg==",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.10",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.10.nupkg.sha512"
+      "sha512": "sha512-D11+367YL1vv16PekAZxXqgTpI9lR1BitraJOiR73ndFoKyL4YvZmoY6V09eqm7CIYur7TXtVdM62Ruuzda6XA==",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.0-preview.6.23329.4",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.0-preview.6.23329.4.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/6.0.10": {
       "type": "package",

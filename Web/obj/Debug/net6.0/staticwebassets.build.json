@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5PGdHeQ4IPyuipEIHIi3nU5tTq0X0I3sxWAO6VOeMIg=",
+  "Hash": "FHQcUicTLiD46Bsg9WiwsI/AcSg1t1ENGdci71v97H0=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -1375,6 +1375,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\lib\\microsoft\\signalR\\signalr.js",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "lib/microsoft/signalR/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\microsoft\\signalR\\signalr.js"
     },
     {
       "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\lib\\moment\\moment.js",
