@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\bg.jpg"
     },
     {
+      "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Home\\Home.js",
+      "PackagePath": "staticwebassets\\js\\Home\\Home.js"
+    },
+    {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Login\\Login.js",
       "PackagePath": "staticwebassets\\js\\Login\\Login.js"
     },
@@ -63,6 +67,10 @@
     {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Usuarios\\Usuarios.js",
       "PackagePath": "staticwebassets\\js\\Usuarios\\Usuarios.js"
+    },
+    {
+      "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Utils\\Utils.js",
+      "PackagePath": "staticwebassets\\js\\Utils\\Utils.js"
     },
     {
       "Id": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\site.js",

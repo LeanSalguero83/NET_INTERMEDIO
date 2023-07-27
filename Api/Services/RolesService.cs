@@ -23,7 +23,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "RolesService", "BuscarRolesAsync");
+               
                 throw ex;
             }
         }
@@ -37,7 +37,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "RolesService", "GuardarRolASync");
+                
                 throw ex;
             }
         }
@@ -51,7 +51,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "RolesService", "EliminarRolASync");
+                
                 throw ex;
             }
         }

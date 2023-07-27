@@ -4,9 +4,11 @@ using Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Api.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class UsuariosController
@@ -17,7 +19,7 @@ namespace Api.Controllers
         {
             _usuariosService = usuariosService;
         }
-
+        [Authorize]
         [HttpGet]
         [Route("BuscarUsuarios")]
         public async Task<List<Usuarios>> BuscarUsuarios()

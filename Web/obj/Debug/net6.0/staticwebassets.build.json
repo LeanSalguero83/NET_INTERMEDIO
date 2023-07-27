@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PO0D31TBDO2E4EeDHDWNfNAmf49I7HcHGlB/lYwTzWI=",
+  "Hash": "5PGdHeQ4IPyuipEIHIi3nU5tTq0X0I3sxWAO6VOeMIg=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -221,6 +221,23 @@
       "OriginalItemSpec": "wwwroot\\images\\Image_not_available.png"
     },
     {
+      "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Home\\Home.js",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "js/Home/Home.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Home\\Home.js"
+    },
+    {
       "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Login\\Login.js",
       "SourceId": "Web",
       "SourceType": "Discovered",
@@ -321,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Usuarios\\Usuarios.js"
+    },
+    {
+      "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\js\\Utils\\Utils.js",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "js/Utils/Utils.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Utils\\Utils.js"
     },
     {
       "Identity": "C:\\Users\\Leandro\\Desktop\\NET_INTERMEDIO\\Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

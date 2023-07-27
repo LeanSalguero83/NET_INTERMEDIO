@@ -1,10 +1,12 @@
 ﻿var tablaProductos
 
 $(document).ready(function () {
+    var token = getCookie("Token");
     tablaProductos = $('#productos').DataTable({
         ajax: {
             url: 'https://localhost:7194/api/productos/buscarproductos',
-            dataSrc: ''
+            dataSrc: '',
+            headers: { "Authorization": "Bearer " + token }
         },
         columns: [
             { data: 'id', title: 'Id' },

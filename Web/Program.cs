@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,11 +19,24 @@ builder.Services.AddAuthentication(option =>
 	};
 });
 
+builder.Services.AddAuthorization(option =>
+{
+    option.AddPolicy("ADMINISTRADORES", policy =>
+    {
+        policy.RequireRole("Administrador");
+    });
+    option.AddPolicy("USUARIOS", policy =>
+    {
+        policy.RequireRole("Usuario");
+    });
+});
 builder.Services.AddHttpClient("useApi", config =>
 {
 	config.BaseAddress = new Uri(builder.Configuration["Url:Api"]);
 });
 
+
+builder.Services.AddSession();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,7 +53,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseSession();
 app.MapControllerRoute(
 	name: "default",
 	pattern: "{controller=Login}/{action=Login}/{id?}");

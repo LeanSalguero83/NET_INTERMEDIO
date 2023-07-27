@@ -26,7 +26,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "ProductosService", "BuscarProductosAsync");
+                
                 throw ex;
             }
         }
@@ -40,7 +40,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "ProductosService", "GuardarProductoASync");
+               
                 throw ex;
             }
 
@@ -55,7 +55,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "ProductosService", "EliminarProductoASync");
+               
                 throw ex;
             }
 

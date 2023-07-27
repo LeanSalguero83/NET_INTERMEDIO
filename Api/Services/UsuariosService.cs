@@ -23,7 +23,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "UsuariosService", "BuscarUsuariosAsync");
+                
                 throw ex;
             }
         }
@@ -38,7 +38,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "UsuariosService", "GuardarUsuarioASync");
+                
                 throw ex;
             }
         }
@@ -52,7 +52,7 @@ namespace Api.Services
             }
             catch (Exception ex)
             {
-                GenerateLogHelper.LogError(ex, "UsuariosService", "EliminarUsuarioASync");
+                
                 throw ex;
             }
         }

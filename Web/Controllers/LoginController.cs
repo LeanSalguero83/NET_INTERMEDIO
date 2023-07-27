@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authentication;
 using System.Net.Mail;
 using System.Net;
 using Newtonsoft.Json;
+using Web.Models;
 
 
 namespace Web.Controllers
@@ -51,16 +52,16 @@ namespace Web.Controllers
         public async Task<IActionResult> Ingresar(LoginDto login)
         {
             var baseApi = new BaseApi(_httpClient);
-            var token = await baseApi.PostToApi("Authenticate/Login", login);
+            var token = await baseApi.PostToApi("Authenticate/Login", login, "");
             var resultadoLogin = token as OkObjectResult;
 
             if (resultadoLogin != null)
             {
                 var resultadoSplit = resultadoLogin.Value.ToString().Split(";");
                 ClaimsIdentity identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Name, ClaimTypes.Role);
-                Claim claimNombre = new(ClaimTypes.Name, resultadoSplit[0]);
-                Claim claimRole = new(ClaimTypes.Role, resultadoSplit[1]);
-                Claim claimEmail = new(ClaimTypes.Email, resultadoSplit[2]);
+                Claim claimNombre = new(ClaimTypes.Name, resultadoSplit[1]);
+                Claim claimRole = new(ClaimTypes.Role, resultadoSplit[2]);
+                Claim claimEmail = new(ClaimTypes.Email, resultadoSplit[3]);
 
                 identity.AddClaim(claimNombre);
                 identity.AddClaim(claimRole);
@@ -72,8 +73,12 @@ namespace Web.Controllers
                 {
                     ExpiresUtc = DateTime.Now.AddDays(1)
                 });
-                ViewBag.NombreUsuario = resultadoSplit[0];
-                return View("~/Views/Home/Index.cshtml");
+                ViewBag.NombreUsuario = resultadoSplit[1];
+                HttpContext.Session.SetString("Token", resultadoSplit[0]);
+                var homeViewModel = new HomeViewModel();
+                homeViewModel.Token = resultadoSplit[0];
+
+                return View("~/Views/Home/Index.cshtml", homeViewModel);
             }
             else
             {
@@ -99,7 +104,8 @@ namespace Web.Controllers
             login.Codigo = codigo;
 
             var baseApi = new BaseApi(_httpClient);
-            var response = await baseApi.PostToApi("RecuperarCuenta/GuardarCodigo", login);
+            var token = HttpContext.Session.GetString("Token");
+            var response = await baseApi.PostToApi("RecuperarCuenta/GuardarCodigo", login,token);
             var resultadoLogin = response as OkObjectResult;
 
             if (resultadoLogin != null && resultadoLogin.Value.ToString() == "true")
@@ -142,7 +148,8 @@ namespace Web.Controllers
         public async Task<IActionResult> CambiarClave(LoginDto login)
         {
             var baseApi = new BaseApi(_httpClient);
-            var response = await baseApi.PostToApi("RecuperarCuenta/CambiarClave", login);
+            var token = HttpContext.Session.GetString("Token");
+            var response = await baseApi.PostToApi("RecuperarCuenta/CambiarClave", login, token);
             var resultadoLogin = response as OkObjectResult;
             if (resultadoLogin != null && resultadoLogin.Value.ToString() == "true")
             {
@@ -160,7 +167,8 @@ namespace Web.Controllers
             var baseApi = new BaseApi(_httpClient);
             usuario.Id_Rol = 2;
             usuario.Activo = true;
-            var response = await baseApi.PostToApi("Usuarios/GuardarUsuario", usuario);
+            var token = HttpContext.Session.GetString("Token");
+            var response = await baseApi.PostToApi("Usuarios/GuardarUsuario", usuario,token);
 
             var resultadoLogin = response as OkObjectResult;
 
